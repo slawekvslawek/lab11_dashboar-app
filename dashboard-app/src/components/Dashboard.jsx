@@ -19,14 +19,14 @@ export function Dashboard() {
    const [currentData, currentDataSet] = useState(null);
 
    const getDataOnDate = async (date) => {
-          const res = await fetch("https://dashboard2-app/api/params/search/" + date)
+          const res = await fetch("https://dashboard2-app.herokuapp.com/api/params/search/" + date)
           const dataRes = await res.json();
           setDatasets(dataRes);
 
       }
 
    const getAllData = async () => {
-        const res = await fetch("https://dashboard2-app/api/params")
+        const res = await fetch("https://dashboard2-app.herokuapp.com/api/params")
         const dataRes = await res.json();
         setDatasets(dataRes);
       }
@@ -86,7 +86,7 @@ export function Dashboard() {
 
    useEffect(() => {
 
-        const socket = io("https://dashboard2-app", {
+        const socket = io("https://dashboard2-app.herokuapp.com", {
            transports: ['websocket', 'polling', 'flashsocket'],
            });
            socket.on("currentState", data => {
@@ -96,11 +96,11 @@ export function Dashboard() {
        const fetchAir = async () => {
 
 
-           const res = await fetch("https://dashboard2-app/api/params")
+           const res = await fetch("https://dashboard2-app.herokuapp.com/api/params")
            const dataRes = await res.json();
 
 
-           const currentRes = await fetch("https://dashboard2-app/api/params/last")
+           const currentRes = await fetch("https://dashboard2-app.herokuapp.com/api/params/last")
            const currentDataRes = await currentRes.json();
 
            currentDataSet(currentDataRes);
