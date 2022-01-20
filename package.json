@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "keywords": [
+    "server"
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-es2015": "6.24.1",
+    "bluebird": "3.5.1",
+    "build": "^0.1.4",
+    "cors": "2.8.5",
+    "express": "4.17.2",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.4",
+    "moment": "2.19.2",
+    "mongodb": "4.2.2",
+    "mongoose": "6.1.5",
+    "mongoose-bird": "0.0.1",
+    "mongoose-unique-validator": "3.0.0",
+    "morgan": "1.10.0",
+    "react-calendar": "^3.6.0",
+    "sha1": "1.1.1",
+    "socket.io": "^2.4.1",
+    "vision": "4.1.0"
+  },
+  "author": "Darek",
+  "license": "ISC"
+}
